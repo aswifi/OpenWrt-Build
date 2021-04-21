@@ -23,6 +23,10 @@ popd
 git clone --depth=1 https://github.com/Lienol/openwrt-package
 popd
 
+# Add Coolsnowwolf's Packages
+git clone --depth=1 https://github.com/coolsnowwolf/lede/tree/master/package/lean
+popd
+
 # Add Kenzok8's Packages
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages
 popd
@@ -33,12 +37,6 @@ popd
 
 # Add luci-app-onliner
 git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
-popd
-
-# Add luci-app-diskman
-git clone --depth=1 https://github.com/SuLingGG/luci-app-diskman
-mkdir parted
-cp luci-app-diskman/Parted.Makefile parted/Makefile
 popd
 
 # Add luci-theme-argon
