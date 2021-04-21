@@ -6,8 +6,8 @@
 # See /LICENSE for more information.
 #
 # https://github.com/P3TERX/Actions-OpenWrt
-# File name: diy-beta.sh
-# Description: OpenWrt DIY script beta (After Update feeds)
+# File name: diy-re.sh
+# Description: OpenWrt DIY script re (After Update feeds)
 #
 
 # Modify default IP
