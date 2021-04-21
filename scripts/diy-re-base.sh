@@ -15,7 +15,6 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 popd
 
 # Add feed sources
-sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 sed -i '$a src-git coolsnowwolf https://github.com/coolsnowwolf/lede/tree/master/package/lean' feeds.conf.default
 popd
 
