@@ -24,7 +24,7 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: config/app-extra-user.config
-  DIY_P1_SH: scripts/diy-part1.sh
+  DIY_P1_SH: scripts/diy-re-base.sh
   DIY_RE_SH: scripts/diy-re.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
