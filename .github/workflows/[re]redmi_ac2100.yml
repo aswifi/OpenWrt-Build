@@ -23,7 +23,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: config/app-extra-user.config
+  CONFIG_FILE: config/app-extra-re.config
   DIY_P1_SH: scripts/diy-re-base.sh
   DIY_RE_SH: scripts/diy-re.sh
   UPLOAD_BIN_DIR: false
