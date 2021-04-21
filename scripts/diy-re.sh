@@ -23,12 +23,12 @@ popd
 git clone --depth=1 https://github.com/Lienol/openwrt-package
 popd
 
-# Add Coolsnowwolf's Packages
-git clone --depth=1 https://github.com/coolsnowwolf/lede/tree/master/package/lean
-popd
-
 # Add Kenzok8's Packages
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages
+popd
+
+# Add Coolsnowwolf's Packages
+git clone --depth=1 https://github.com/coolsnowwolf/lede/tree/master/package/lean
 popd
 
 # Add luci-proto-minieap
