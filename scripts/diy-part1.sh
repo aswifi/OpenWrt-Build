@@ -16,4 +16,3 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 # Add feed sources
 sed -i '$a src-git kenzok8 https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
-sed -i '$a src-git coolsnowwolf https://github.com/coolsnowwolf/lede/tree/master/package/lean' feeds.conf.default
