@@ -45,13 +45,6 @@ git clone --depth=1 https://github.com/zcy85611/openwrt-luci-kcp-udp
 # Add OpenAppFilter
 git clone --depth=1 https://github.com/destan19/OpenAppFilter
 
-# Mod zzz-default-settings
-pushd package/lean/default-settings/files
-sed -i '/http/d' zzz-default-settings
-export orig_version="$(cat "zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')"
-sed -i "s/${orig_version}/${orig_version} ($(date +"%Y-%m-%d"))/g" zzz-default-settings
-popd
-
 # Use Lienol's https-dns-proxy package
 pushd feeds/packages/net
 rm -rf https-dns-proxy
