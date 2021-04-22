@@ -23,7 +23,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: config/app-extra-re.config
+  CONFIG_FILE: config/redmi_ac2100.config
   DIY_P1_SH: scripts/diy-re-base.sh
   DIY_RE_SH: scripts/diy-re.sh
   UPLOAD_BIN_DIR: false
@@ -75,7 +75,7 @@ jobs:
       run: |
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-        cat config/app-extra.config >> openwrt/.config
+        cat config/app-extra-re.config >> openwrt/.config
         chmod +x $DIY_RE_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_RE_SH
