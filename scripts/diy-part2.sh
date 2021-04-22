@@ -22,11 +22,11 @@ popd
 mkdir package/community
 pushd package/community
 
-# Add Coolsnowwolf's Packages
-git clone --depth=1 https://github.com/coolsnowwolf/lede
-
 # Add Kenzok8's Packages
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages
+
+# Add Coolsnowwolf's Packages
+git clone --depth=1 https://github.com/coolsnowwolf/lede/tree/master/package/lean
 
 # Add luci-app-onliner
 git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
