@@ -28,23 +28,8 @@ git clone --depth=1 https://github.com/coolsnowwolf/lede
 # Add Kenzok8's Packages
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages
 
-# Add luci-app-passwall
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
-
-# Add luci-app-vssr <M>
-git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
-git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
-
-# Add OpenClash
-git clone --depth=1 -b master https://github.com/vernesong/OpenClash
-
 # Add luci-app-onliner
 git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
-
-# Add luci-app-diskman
-git clone --depth=1 https://github.com/SuLingGG/luci-app-diskman
-mkdir parted
-cp luci-app-diskman/Parted.Makefile parted/Makefile
 
 # Add luci-theme-argon
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
