@@ -18,7 +18,7 @@ mkdir package/community
 pushd package/community
 
 # Add Kenzok8's Packages & Dependency
-git clone --depth=1 src-git small https://github.com/kenzok8/small
+git clone --depth=1 https://github.com/kenzok8/small
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages
 
 # Add Coolsnowwolf's Packages
