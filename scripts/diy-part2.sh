@@ -22,7 +22,7 @@ src-git small https://github.com/kenzok8/small
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages
 
 # Add Coolsnowwolf's Packages
-git clone --depth=1 https://github.com/coolsnowwolf/lede/tree/master/package/lean
+#git clone --depth=1 https://github.com/coolsnowwolf/lede/tree/master/package/lean
 
 # Add luci-app-onliner
 git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
