@@ -51,20 +51,16 @@ jobs:
         sudo -E apt-get -qq autoremove --purge
         sudo -E apt-get -qq clean
         sudo timedatectl set-timezone "$TZ"
-        sudo mkdir -p /workdir
-        sudo chown $USER:$GROUPS /workdir
-        
-    - name: Change user
-      run: |
         su ubuntu
-        cd /workdir
+        mkdir -p /home/ubuntu/workdir
+        chown $USER:$GROUPS /home/ubuntu/workdir
         
     - name: Clone source code
-      working-directory: /workdir
+      working-directory: /home/ubuntu/workdir
       run: |
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
-        ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
+        ln -sf /home/ubuntu/workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
     - name: Load custom feeds
       run: |
