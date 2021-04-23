@@ -39,7 +39,7 @@ git clone --depth=1 https://github.com/Lienol/openwrt-package
 #git clone --depth=1 -b master https://github.com/vernesong/OpenClash
 
 # Add luci-app-onliner
-git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
+#git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
 
 # Add luci-theme-argon
 #git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
@@ -47,13 +47,13 @@ git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
 #rm -rf ../lean/luci-theme-argon
 
 # Add subconverter
-git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
+#git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
 
 # Add luci-udptools
-git clone --depth=1 https://github.com/zcy85611/openwrt-luci-kcp-udp
+#git clone --depth=1 https://github.com/zcy85611/openwrt-luci-kcp-udp
 
 # Add OpenAppFilter
-git clone --depth=1 https://github.com/destan19/OpenAppFilter
+#git clone --depth=1 https://github.com/destan19/OpenAppFilter
 
 # Mod zzz-default-settings
 pushd package/lean/default-settings/files
