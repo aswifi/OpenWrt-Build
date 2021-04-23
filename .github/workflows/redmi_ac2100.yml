@@ -57,7 +57,8 @@ jobs:
     - name: Change user
       run: |
         su ubuntu
-
+        cd /workdir
+        
     - name: Clone source code
       working-directory: /workdir
       run: |
