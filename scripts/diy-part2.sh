@@ -17,14 +17,12 @@ sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_genera
 mkdir package/community
 pushd package/community
 
-# Add Kenzok8's Packages
+# Add Kenzok8's Packages & Dependency
+src-git small https://github.com/kenzok8/small
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages
 
 # Add Coolsnowwolf's Packages
 git clone --depth=1 https://github.com/coolsnowwolf/lede/tree/master/package/lean
-
-# Add luci-app-passwall & dependency
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
 
 # Add luci-app-onliner
 git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
