@@ -22,7 +22,7 @@ popd
 #git clone --depth=1 https://github.com/Lienol/openwrt-package
 
 # Add Kenzok8's Packages
-src-git small https://github.com/kenzok8/small
+sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages
 
 # Add Coolsnowwolf's Packages
