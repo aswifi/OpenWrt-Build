@@ -18,7 +18,8 @@ mkdir package/community
 pushd package/community
 popd
 
-# Add Kenzok8's Packages
+# Add Kenzok8's Packages & Dependency
+git clone --depth=1 https://github.com/kenzok8/small
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages
 
 # Add Coolsnowwolf's Packages
