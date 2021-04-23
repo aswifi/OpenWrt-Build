@@ -16,3 +16,6 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 # Add feed sources
 #sed -i '$a src-git kenzok8 https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 #sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
+
+#Add packages
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-18.06 
