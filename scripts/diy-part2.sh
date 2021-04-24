@@ -52,7 +52,7 @@ git clone https://github.com/destan19/OpenAppFilter.git # Add OpenAppFilter
 sed -i "s/OpenWrt /insChow build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
 
 # Delete default password
-sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
+#sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
 #popd
 
 # Add luci-theme-argon-18.06_sed
