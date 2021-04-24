@@ -39,11 +39,6 @@ rm -rf ../lean/luci-theme-argon
 # Add luci-theme-argon-18.06_sed
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon-18.06/g' feeds/luci/collections/luci/Makefile
 
-# Fix mt76 wireless driver
-pushd package/kernel/mt76
-sed -i '/mt7662u_rom_patch.bin/a\\techo mt76-usb disable_usb_sg=1 > $\(1\)\/etc\/modules.d\/mt76-usb' Makefile
-popd
-
 # Mod zzz-default-settings & Modify the version number & Delete default password
 pushd package/lean/default-settings/files
 sed -i '/http/d' zzz-default-settings
