@@ -14,21 +14,21 @@
 sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add feed sources
-#sed -i '$a src-git kenzok8 https://github.com/kenzok8/openwrt-packages' feeds.conf.default
-#sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
+sed -i '$a  src-git small https://github.com/kenzok8/small' feeds.conf.default
+sed -i '$a src-git openwrt-packages https://github.com/kenzok8/openwrt-packages.git' feeds.conf.default
 
 # Add Kenzok8's Packages & Dependency
-git clone --depth=1 https://github.com/kenzok8/small
-git clone --depth=1 https://github.com/kenzok8/openwrt-packages
+git clone https://github.com/kenzok8/small.git
+git clone https://github.com/kenzok8/openwrt-packages.git
 
 # Add Coolsnowwolf's Packages
 git clone --depth=1 https://github.com/coolsnowwolf/lede/tree/master/package/lean
 
 #Add packages
-git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner # Add luci-app-onliner
-git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter # Add subconverter
-git clone --depth=1 https://github.com/zcy85611/openwrt-luci-kcp-udp # Add luci-udptools
-git clone --depth=1 https://github.com/destan19/OpenAppFilter # Add OpenAppFilter
+git clone https://github.com/rufengsuixing/luci-app-onliner.git # Add luci-app-onliner
+git clone https://github.com/tindy2013/openwrt-subconverter.git # Add subconverter
+git clone https://github.com/zcy85611/Openwrt-Package.git # Add luci-udptools
+git clone https://github.com/destan19/OpenAppFilter.git # Add OpenAppFilter
 
 # Add luci-theme-argon
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
