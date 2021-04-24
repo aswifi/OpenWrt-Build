@@ -49,10 +49,23 @@ git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/reds
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/screenshot
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/smartdns
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/tcping
-git clone --depth=1 
-git clone --depth=1 
-git clone --depth=1 
-git clone --depth=1 
+git clone --depth=1 https://github.com/kenzok8/small/tree/master/brook
+git clone --depth=1 https://github.com/kenzok8/small/tree/master/chinadns-ng
+git clone --depth=1 https://github.com/kenzok8/small/tree/master/dns2socks
+git clone --depth=1 https://github.com/kenzok8/small/tree/master/ipt2socks
+git clone --depth=1 https://github.com/kenzok8/small/tree/master/kcptun
+git clone --depth=1 https://github.com/kenzok8/small/tree/master/openssl1.1
+git clone --depth=1 https://github.com/kenzok8/small/tree/master/pdnsd-alt
+git clone --depth=1 https://github.com/kenzok8/small/tree/master/shadowsocks-rust
+git clone --depth=1 https://github.com/kenzok8/small/tree/master/shadowsocksr-libev
+git clone --depth=1 https://github.com/kenzok8/small/tree/master/simple-obfs
+git clone --depth=1 https://github.com/kenzok8/small/tree/master/ssocks
+git clone --depth=1 https://github.com/kenzok8/small/tree/master/trojan-go
+git clone --depth=1 https://github.com/kenzok8/small/tree/master/trojan-plus
+git clone --depth=1 https://github.com/kenzok8/small/tree/master/trojan
+git clone --depth=1 https://github.com/kenzok8/small/tree/master/v2ray-plugin
+git clone --depth=1 https://github.com/kenzok8/small/tree/master/xray-core
+git clone --depth=1 https://github.com/kenzok8/small/tree/master/xray-plugin
 
 # Add Coolsnowwolf's Packages
 git clone https://github.com/coolsnowwolf/lede.git
