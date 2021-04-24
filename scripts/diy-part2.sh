@@ -18,7 +18,6 @@ mkdir package/community
 pushd package/community
 
 # Add Kenzok8's Packages & Dependency
-git clone https://github.com/kenzok8/small.git
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/AdGuardHome
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/gost
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/lua-maxminddb
