@@ -41,20 +41,17 @@ git clone https://github.com/destan19/OpenAppFilter.git # Add OpenAppFilter
 #git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 #rm -rf ../lean/luci-theme-argon
 
-# Mod zzz-default-settings & Delete default password
+# Add luci-theme-argon-18.06_sed
+#sed -i 's/luci-theme-bootstrap/luci-theme-argon-18.06/g' feeds/luci/collections/luci/Makefile
+
+# Mod zzz-default-settings & Modify the version number & Delete default password
 pushd package/lean/default-settings/files
 sed -i '/http/d' zzz-default-settings
 export orig_version="$(cat "zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')"
-sed -i "s/${orig_version}/${orig_version} ($(date +"%Y-%m-%d"))/g" zzz-default-settings
+sed -i "s/OpenWrt /Redmi-AC2100 build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" zzz-default-settings
 sed -i "/CYXluq4wUazHjmCDBCqXF/d" zzz-default-settings
-popd
-
-# Modify the version number
-sed -i "s/OpenWrt /insChow build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
+#popd
 
 # Delete default password
 #sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
 #popd
-
-# Add luci-theme-argon-18.06_sed
-#sed -i 's/luci-theme-bootstrap/luci-theme-argon-18.06/g' feeds/luci/collections/luci/Makefile
