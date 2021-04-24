@@ -1,21 +1,21 @@
 #!/bin/bash
 #
-# Copyright (c) 2019-2020 P3TERX <https://p3terx.com>
+# Copyright (c) 2019-2021 P3TERX <https://p3terx.com>
 #
 # This is free software, licensed under the MIT License.
 # See /LICENSE for more information.
 #
 # https://github.com/P3TERX/Actions-OpenWrt
-# File name: diy-part2.sh
-# Description: OpenWrt DIY script part 2 (After Update feeds)
+# File name: diy-re.sh
+# Description: OpenWrt DIY script re (After Update feeds)
 #
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.66.1/g' package/base-files/files/bin/config_generate
 
 # Clone community packages to package/community
-#mkdir package/community
-#pushd package/community
+mkdir package/community
+pushd package/community
 
 # Add Kenzok8's Packages & Dependency
 #git clone https://github.com/kenzok8/small.git
