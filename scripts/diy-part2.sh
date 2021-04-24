@@ -19,7 +19,40 @@ pushd package/community
 
 # Add Kenzok8's Packages & Dependency
 git clone https://github.com/kenzok8/small.git
-git clone https://github.com/kenzok8/openwrt-packages.git
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/AdGuardHome
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/gost
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/lua-maxminddb
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-adguardhome
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-advanced
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-aliddns
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-clash
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-dnsfilter
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-eqos
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-gost
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-jd-dailybonus
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-openclash
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-passwall
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-serverchan
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-smartdns
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-ssr-plus
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-vssr
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/luci-theme-argon_new
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/luci-theme-atmaterial
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/luci-theme-edge
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/luci-theme-ifit
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/luci-theme-opentomato
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/luci-theme-opentomcat
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/luci-theme-opentopd
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/microsocks
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/naiveproxy
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/redsocks2
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/screenshot
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/smartdns
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages/tree/master/tcping
+git clone --depth=1 
+git clone --depth=1 
+git clone --depth=1 
+git clone --depth=1 
 
 # Add Coolsnowwolf's Packages
 git clone https://github.com/coolsnowwolf/lede.git
