@@ -18,8 +18,9 @@ mkdir package/community
 pushd package/community
 
 # Add Kenzok8's Packages & Dependency
-git clone https://github.com/kenzok8/small.git root/ && mv /root/small/* package/
-git clone https://github.com/kenzok8/openwrt-packages.git root/ && mv /root/openwrt-packages/* package/
+sudo mkdir /root/temp
+git clone https://github.com/kenzok8/small.git /root/temp && mv /root/temp/* package/ && sudo rm -rf /root/temp
+git clone https://github.com/kenzok8/openwrt-packages.git /root/temp && mv /root/temp/* package/ && sudo rm -rf /root/temp
 
 # Add Coolsnowwolf's Packages
 git clone https://github.com/coolsnowwolf/lede.git
