@@ -35,11 +35,6 @@ git clone https://github.com/destan19/OpenAppFilter.git # Add OpenAppFilter
 #git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 #rm -rf ../lean/luci-theme-argon
 
-# Fix mt76 wireless driver
-pushd package/kernel/mt76
-sed -i '/mt7662u_rom_patch.bin/a\\techo mt76-usb disable_usb_sg=1 > $\(1\)\/etc\/modules.d\/mt76-usb' Makefile
-popd
-
 # Mod zzz-default-settings
 #pushd package/lean/default-settings/files
 #sed -i '/http/d' zzz-default-settings
