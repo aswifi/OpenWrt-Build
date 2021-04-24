@@ -14,15 +14,15 @@
 sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
 
 # Clone community packages to package/community
-#mkdir package/community
-#pushd package/community
+mkdir package/community
+pushd package/community
 
 # Add Kenzok8's Packages & Dependency
-git clone --depth=1 https://github.com/kenzok8/small
-git clone --depth=1 https://github.com/kenzok8/openwrt-packages
+#git clone https://github.com/kenzok8/small.git
+#git clone https://github.com/kenzok8/openwrt-packages.git
 
 # Add Coolsnowwolf's Packages
-git clone --depth=1 https://github.com/coolsnowwolf/lede/tree/master/package/lean
+#git clone --depth=1 https://github.com/coolsnowwolf/lede/tree/master/package/lean
 
 # Use Lienol's https-dns-proxy package
 pushd feeds/packages/net
