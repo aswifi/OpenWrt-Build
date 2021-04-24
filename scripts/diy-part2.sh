@@ -22,7 +22,7 @@ git clone https://github.com/kenzok8/small.git
 git clone https://github.com/kenzok8/openwrt-packages.git
 
 # Add Coolsnowwolf's Packages
-git clone --depth=1 https://github.com/coolsnowwolf/lede/tree/master/package/lean
+git clone https://github.com/coolsnowwolf/lede.git
 
 #Add other packages
 git clone https://github.com/rufengsuixing/luci-app-onliner.git # Add luci-app-onliner
@@ -34,18 +34,6 @@ git clone https://github.com/destan19/OpenAppFilter.git # Add OpenAppFilter
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 rm -rf ../lean/luci-theme-argon
-
-# Use Lienol's https-dns-proxy package
-pushd feeds/packages/net
-rm -rf https-dns-proxy
-svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
-popd
-
-# Use snapshots' syncthing package
-pushd feeds/packages/utils
-rm -rf syncthing
-svn co https://github.com/openwrt/packages/trunk/utils/syncthing
-popd
 
 # Fix mt76 wireless driver
 pushd package/kernel/mt76
@@ -61,7 +49,6 @@ popd
 
 # Modify the version number
 sed -i "s/OpenWrt /insChow build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
-popd
 
 # Delete default password
 sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
