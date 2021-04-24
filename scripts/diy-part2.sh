@@ -18,11 +18,22 @@ mkdir package/community
 pushd package/community
 
 # Add Kenzok8's Packages & Dependency
-#git clone https://github.com/kenzok8/small.git
-#git clone https://github.com/kenzok8/openwrt-packages.git
+git clone https://github.com/kenzok8/small.git
+git clone https://github.com/kenzok8/openwrt-packages.git
 
 # Add Coolsnowwolf's Packages
-#git clone --depth=1 https://github.com/coolsnowwolf/lede/tree/master/package/lean
+git clone --depth=1 https://github.com/coolsnowwolf/lede/tree/master/package/lean
+
+#Add other packages
+git clone https://github.com/rufengsuixing/luci-app-onliner.git # Add luci-app-onliner
+git clone https://github.com/tindy2013/openwrt-subconverter.git # Add subconverter
+git clone https://github.com/zcy85611/Openwrt-Package.git # Add luci-udptools
+git clone https://github.com/destan19/OpenAppFilter.git # Add OpenAppFilter
+
+# Add luci-theme-argon
+git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
+git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
+rm -rf ../lean/luci-theme-argon
 
 # Use Lienol's https-dns-proxy package
 pushd feeds/packages/net
@@ -54,7 +65,7 @@ popd
 
 # Delete default password
 sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
-#popd
+popd
 
-# Add luci-theme-argon-18.06
-#sed -i 's/luci-theme-bootstrap/luci-theme-argon-18.06/g' feeds/luci/collections/luci/Makefile
+# Add luci-theme-argon-18.06_sed
+sed -i 's/luci-theme-bootstrap/luci-theme-argon-18.06/g' feeds/luci/collections/luci/Makefile
