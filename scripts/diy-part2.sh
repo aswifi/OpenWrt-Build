@@ -21,14 +21,14 @@ pushd package/community
 #mkdir temp_packages
 #git clone https://github.com/kenzok8/small.git temp_packages/ && mv temp_packages/* package/ && rm -rf temp_packages && mkdir temp_packages
 #git clone https://github.com/kenzok8/openwrt-packages.git temp_packages/ && mv temp_packages/* package/ && rm -rf temp_packages
-#git clone https://github.com/kenzok8/small.git
-#git clone https://github.com/kenzok8/openwrt-packages.git
-git clone --no-checkout https://github.com/kenzok8/small.git tmp/package/ && mv tmp/.git . && rmdir tmp && git reset --hard HEAD
-git clone --no-checkout https://github.com/kenzok8/openwrt-packages.git tmp/package/ && mv tmp/.git . && rmdir tmp && git reset --hard HEAD
-popd
+git clone https://github.com/kenzok8/small.git
+git clone https://github.com/kenzok8/openwrt-packages.git
+#git clone --no-checkout https://github.com/kenzok8/small.git tmp/package/ && mv tmp/.git . && rmdir tmp && git reset --hard HEAD
+#git clone --no-checkout https://github.com/kenzok8/openwrt-packages.git tmp/package/ && mv tmp/.git . && rmdir tmp && git reset --hard HEAD
+#popd
 
 # Add Coolsnowwolf's Packages
-git clone https://github.com/coolsnowwolf/lede.git
+#git clone https://github.com/coolsnowwolf/lede.git
 
 #Add other packages
 git clone https://github.com/rufengsuixing/luci-app-onliner.git # Add luci-app-onliner
