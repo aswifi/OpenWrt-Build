@@ -54,7 +54,7 @@ popd
 
 # Delete default password
 sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
-popd
+#popd
 
 # Add luci-theme-argon-18.06
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon-18.06/g' feeds/luci/collections/luci/Makefile
