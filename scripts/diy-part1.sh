@@ -24,7 +24,7 @@ git clone https://github.com/kenzok8/openwrt-packages.git
 # Add Coolsnowwolf's Packages
 git clone --depth=1 https://github.com/coolsnowwolf/lede/tree/master/package/lean
 
-#Add packages
+#Add other packages
 git clone https://github.com/rufengsuixing/luci-app-onliner.git # Add luci-app-onliner
 git clone https://github.com/tindy2013/openwrt-subconverter.git # Add subconverter
 git clone https://github.com/zcy85611/Openwrt-Package.git # Add luci-udptools
