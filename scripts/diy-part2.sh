@@ -18,9 +18,9 @@ mkdir package/community
 pushd package/community
 
 # Add Kenzok8's Packages & Dependency
-sudo mkdir /root/temp_packages
-git clone https://github.com/kenzok8/small.git /root/temp_packages && sudo mv /root/temp_packages/* package/ && sudo rm -rf /root/temp_packages && sudo mkdir /root/temp_packages
-git clone https://github.com/kenzok8/openwrt-packages.git /root/temp_packages && sudo mv /root/temp_packages/* package/ && sudo rm -rf /root/temp_packages
+sudo mkdir temp_packages
+git clone https://github.com/kenzok8/small.git temp_packages/ && sudo mv temp_packages/* package/ && sudo rm -rf temp_packages && sudo mkdir temp_packages
+git clone https://github.com/kenzok8/openwrt-packages.git temp_packages/ && sudo mv temp_packages/* package/ && sudo rm -rf temp_packages
 
 # Add Coolsnowwolf's Packages
 git clone https://github.com/coolsnowwolf/lede.git
