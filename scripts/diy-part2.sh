@@ -21,6 +21,9 @@ sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_genera
 git clone --depth=1 https://github.com/kenzok8/small
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages
 
+# Add Coolsnowwolf's Packages
+git clone --depth=1 https://github.com/coolsnowwolf/lede/tree/master/package/lean
+
 # Use Lienol's https-dns-proxy package
 pushd feeds/packages/net
 rm -rf https-dns-proxy
