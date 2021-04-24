@@ -21,8 +21,11 @@ pushd package/community
 #mkdir temp_packages
 #git clone https://github.com/kenzok8/small.git temp_packages/ && mv temp_packages/* package/ && rm -rf temp_packages && mkdir temp_packages
 #git clone https://github.com/kenzok8/openwrt-packages.git temp_packages/ && mv temp_packages/* package/ && rm -rf temp_packages
-git clone https://github.com/kenzok8/small.git
-git clone https://github.com/kenzok8/openwrt-packages.git
+#git clone https://github.com/kenzok8/small.git
+#git clone https://github.com/kenzok8/openwrt-packages.git
+git clone --no-checkout https://github.com/kenzok8/small.git tmp && mv tmp/* package/ && rmdir tmp
+git clone --no-checkout https://github.com/kenzok8/small.git tmp && mv tmp/* package/ && rmdir tmp
+popd
 
 # Add Coolsnowwolf's Packages
 git clone https://github.com/coolsnowwolf/lede.git
