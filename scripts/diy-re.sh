@@ -25,7 +25,8 @@ sed -i 's/192.168.1.1/192.168.66.1/g' package/base-files/files/bin/config_genera
 #git clone https://github.com/coolsnowwolf/lede.git
 
 #Add other packages
-git clone https://github.com/rufengsuixing/luci-app-onliner.git # Add luci-app-onliner
+git clone https://github.com/garypang13/openwrt-packages.git # Add garypang13's packages
+#git clone https://github.com/rufengsuixing/luci-app-onliner.git # Add luci-app-onliner
 git clone https://github.com/tindy2013/openwrt-subconverter.git # Add subconverter
 git clone https://github.com/zcy85611/Openwrt-Package.git # Add luci-udptools
 git clone https://github.com/destan19/OpenAppFilter.git # Add OpenAppFilter
