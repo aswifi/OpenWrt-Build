@@ -42,11 +42,11 @@ sed -i '/mt7662u_rom_patch.bin/a\\techo mt76-usb disable_usb_sg=1 > $\(1\)\/etc\
 popd
 
 # Mod zzz-default-settings
-pushd package/lean/default-settings/files
-sed -i '/http/d' zzz-default-settings
-export orig_version="$(cat "zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')"
-sed -i "s/${orig_version}/${orig_version} ($(date +"%Y-%m-%d"))/g" zzz-default-settings
-popd
+#pushd package/lean/default-settings/files
+#sed -i '/http/d' zzz-default-settings
+#export orig_version="$(cat "zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')"
+#sed -i "s/${orig_version}/${orig_version} ($(date +"%Y-%m-%d"))/g" zzz-default-settings
+#popd
 
 # Modify the version number
 sed -i "s/OpenWrt /insChow build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
