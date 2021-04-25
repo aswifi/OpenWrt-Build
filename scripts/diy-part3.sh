@@ -55,7 +55,7 @@ pushd package/community
 # Add OpenAppFilter
 #git clone --depth=1 https://github.com/destan19/OpenAppFilter
 
-# Mod zzz-default-settings
+# Mod zzz-default-settings & Delete default password
 pushd package/lean/default-settings/files
 sed -i '/http/d' zzz-default-settings
 export orig_version="$(cat "zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')"
@@ -77,6 +77,3 @@ popd
 # Change default shell to zsh
 sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 popd
-
-# Delete default password
-
