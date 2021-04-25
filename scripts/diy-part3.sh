@@ -11,7 +11,7 @@
 #
 
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.66.1/g' package/base-files/files/bin/config_generate
 
 # Add luci-app-ssr-plus
 #pushd package/lean
@@ -56,11 +56,11 @@ pushd package/community
 #git clone --depth=1 https://github.com/destan19/OpenAppFilter
 
 # Mod zzz-default-settings & Delete default password
-pushd package/lean/default-settings/files
-sed -i '/http/d' zzz-default-settings
-export orig_version="$(cat "zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')"
-sed -i "s/${orig_version}/${orig_version} ($(date +"%Y-%m-%d"))/g" zzz-default-settings && sed -i "/CYXluq4wUazHjmCDBCqXF/d" zzz-default-settings
-popd
+#pushd package/lean/default-settings/files
+#sed -i '/http/d' zzz-default-settings
+#export orig_version="$(cat "zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')"
+#sed -i "s/${orig_version}/${orig_version} ($(date +"%Y-%m-%d"))/g" zzz-default-settings && sed -i "/CYXluq4wUazHjmCDBCqXF/d" zzz-default-settings
+#popd
 
 # Use Lienol's https-dns-proxy package
 #pushd feeds/packages/net
@@ -75,4 +75,4 @@ popd
 #popd
 
 # Change default shell to zsh
-sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
+#sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
