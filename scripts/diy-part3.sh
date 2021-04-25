@@ -46,6 +46,10 @@ pushd package/community
 #git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 #rm -rf ../lean/luci-theme-argon
 
+# Add luci-theme-edge
+git clone --depth=1 https://github.com/garypang13/openwrt-packages/tree/master/luci-theme-edge
+rm -rf ../lean/luci-theme-argon
+
 # Add subconverter
 #git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
 
