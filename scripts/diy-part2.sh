@@ -45,11 +45,11 @@ git clone https://github.com/destan19/OpenAppFilter.git # Add OpenAppFilter
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon-18.06/g' feeds/luci/collections/luci/Makefile
 
 # Mod zzz-default-settings & Modify the version number & Delete default password
-pushd package/lean/default-settings/files
-sed -i '/http/d' zzz-default-settings
-export orig_version="$(cat "zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')"
-sed -i "s/OpenWrt /Redmi-AC2100 build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" zzz-default-settings
-sed -i "/CYXluq4wUazHjmCDBCqXF/d" zzz-default-settings
+#pushd package/lean/default-settings/files
+#sed -i '/http/d' zzz-default-settings
+#export orig_version="$(cat "zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')"
+#sed -i "s/OpenWrt /Redmi-AC2100 build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" zzz-default-settings
+#sed -i "/CYXluq4wUazHjmCDBCqXF/d" zzz-default-settings
 #popd
 
 # Delete default password
