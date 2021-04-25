@@ -30,6 +30,9 @@ pushd package/community
 # Add Coolsnowwolf's Packages
 git clone https://github.com/coolsnowwolf/lede.git
 
+# Add Garypang13's Packages
+git clone https://github.com/garypang13/openwrt-packages.git
+
 #Add other packages
 git clone https://github.com/rufengsuixing/luci-app-onliner.git # Add luci-app-onliner
 git clone https://github.com/tindy2013/openwrt-subconverter.git # Add subconverter
