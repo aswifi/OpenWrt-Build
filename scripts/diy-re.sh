@@ -22,19 +22,19 @@ pushd package/community
 #git clone https://github.com/kenzok8/openwrt-packages.git
 
 # Add Coolsnowwolf's Packages
-#git clone https://github.com/coolsnowwolf/lede.git
+git clone https://github.com/coolsnowwolf/lede.git
 
 #Add other packages
-git clone https://github.com/garypang13/openwrt-packages.git # Add garypang13's packages
-#git clone https://github.com/rufengsuixing/luci-app-onliner.git # Add luci-app-onliner
+#git clone https://github.com/garypang13/openwrt-packages.git # Add garypang13's packages
+git clone https://github.com/rufengsuixing/luci-app-onliner.git # Add luci-app-onliner
 git clone https://github.com/tindy2013/openwrt-subconverter.git # Add subconverter
 git clone https://github.com/zcy85611/Openwrt-Package.git # Add luci-udptools
 git clone https://github.com/destan19/OpenAppFilter.git # Add OpenAppFilter
 
 # Add luci-theme-argon
-git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
-git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
-rm -rf ../lean/luci-theme-argon
+#git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
+#git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
+#rm -rf ../lean/luci-theme-argon
 
 # Add luci-theme-argon-18.06_sed
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon-18.06/g' feeds/luci/collections/luci/Makefile
