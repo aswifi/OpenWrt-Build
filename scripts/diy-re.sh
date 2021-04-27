@@ -18,7 +18,7 @@ mkdir package/community
 pushd package/community
 
 # Add Lienol's Packages
-git clone https://github.com/Lienol/openwrt.git
+git clone -b 21.02 https://github.com/Lienol/openwrt.git
 
 # Add Kenzok8's Packages & Dependency
 #git clone https://github.com/kenzok8/small.git
