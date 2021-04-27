@@ -17,15 +17,15 @@ sed -i 's/192.168.1.1/192.168.66.1/g' package/base-files/files/bin/config_genera
 mkdir package/community
 pushd package/community
 
+# Add Lienol's Packages
+git clone https://github.com/Lienol/openwrt.git
+
 # Add Kenzok8's Packages & Dependency
 #git clone https://github.com/kenzok8/small.git
 #git clone https://github.com/kenzok8/openwrt-packages.git
 
 # Add Coolsnowwolf's Packages
 #git clone https://github.com/coolsnowwolf/lede.git
-
-# Add Lienol's Packages
-git clone https://github.com/Lienol/openwrt.git
 
 #Add other packages
 #git clone https://github.com/garypang13/openwrt-packages.git # Add garypang13's packages
