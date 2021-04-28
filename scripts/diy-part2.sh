@@ -28,7 +28,7 @@ pushd package/community
 #popd
 
 # Add Coolsnowwolf's Packages
-git clone https://github.com/coolsnowwolf/lede.git
+#git clone https://github.com/coolsnowwolf/lede.git
 
 # Add Garypang13's Packages
 #git clone https://github.com/garypang13/openwrt-packages.git
@@ -46,6 +46,10 @@ git clone https://github.com/destan19/OpenAppFilter.git # Add OpenAppFilter
 
 # Add luci-theme-argon-18.06_sed
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon-18.06/g' feeds/luci/collections/luci/Makefile
+
+# Add luci-theme-edge
+git clone --depth=1 https://github.com/garypang13/openwrt-packages/tree/master/luci-theme-edge
+rm -rf ../lean/luci-theme-edge
 
 # Mod zzz-default-settings & Modify the version number & Delete default password
 #pushd package/lean/default-settings/files
