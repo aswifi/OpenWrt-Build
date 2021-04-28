@@ -48,7 +48,7 @@ git clone https://github.com/destan19/OpenAppFilter.git # Add OpenAppFilter
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon-18.06/g' feeds/luci/collections/luci/Makefile
 
 # Add luci-theme-edge
-git clone --depth=1 https://github.com/garypang13/openwrt-packages/tree/master/luci-theme-edge
+git clone https://github.com/kenzok78/luci-theme-edge.git
 rm -rf ../lean/luci-theme-edge
 
 # Mod zzz-default-settings & Modify the version number & Delete default password
