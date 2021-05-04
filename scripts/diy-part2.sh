@@ -53,19 +53,9 @@ git clone https://github.com/kenzok78/luci-theme-edge.git package/lean/luci-them
 rm -rf package/lean/luci-theme-argon
 
 # Mod zzz-default-settings & Modify the version number & Delete default password
-#pushd package/lean/default-settings/files
-#sed -i '/http/d' zzz-default-settings
-#export orig_version="$(cat "zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')"
-#sed -i "s/OpenWrt /Redmi-AC2100 build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" zzz-default-settings
-#sed -i "/CYXluq4wUazHjmCDBCqXF/d" zzz-default-settings
-#popd
-
-# Delete default password & Custom settings
-cp -f package/litte/commit/default-settings package/lean/default-settings/files/zzz-default-settings
-cp -f package/litte/commit/banner package/base-files/files/etc/banner
-cp -f package/litte/commit/Leandiffconfig .config && make defconfig
-git pull && ./scripts/feeds update -a
-./scripts/feeds install -a
+pushd package/lean/default-settings/files
+sed -i '/http/d' zzz-default-settings
+export orig_version="$(cat "zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')"
 sed -i "s/OpenWrt /Redmi-AC2100 build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" zzz-default-settings
-sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
+sed -i "/CYXluq4wUazHjmCDBCqXF/d" zzz-default-settings
 #popd
