@@ -62,6 +62,11 @@ rm -rf package/lean/luci-theme-argon
 #sed -i "/CYXluq4wUazHjmCDBCqXF/d" zzz-default-settings
 #popd
 
-# Delete default password
+# Delete default password & Custom settings
+cp -f package/litte/default-settings package/lean/default-settings/files/zzz-default-settings
+cp -f package/litte/banner package/base-files/files/etc/banner
+cp -f package/litte/Leandiffconfig diffconfig && cp diffconfig .config && make defconfig
+./scripts/feeds update -a && ./scripts/feeds install -a && ./scripts/feeds install -a
+sed -i "s/OpenWrt /Redmi-AC2100 build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" zzz-default-settings
 sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
 #popd
