@@ -13,9 +13,6 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.66.1/g' package/base-files/files/bin/config_generate
 
-# 取消bootstrap为默认主题
-sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
-
 # Clone community packages to package/community
 mkdir package/community
 pushd package/community
@@ -50,7 +47,8 @@ pushd package/community
 # Add luci-theme-argon-18.06_sed
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon-18.06/g' feeds/luci/collections/luci/Makefile
 
-# Add luci-theme-edge
+# 取消bootstrap为默认主题 & Add luci-theme-edge
+sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 git clone https://github.com/kenzok78/luci-theme-edge.git package/lean/luci-theme-edge
 rm -rf package/lean/luci-theme-argon
 
