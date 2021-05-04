@@ -66,7 +66,8 @@ rm -rf package/lean/luci-theme-argon
 cp -f package/litte/commit/default-settings package/lean/default-settings/files/zzz-default-settings
 cp -f package/litte/commit/banner package/base-files/files/etc/banner
 cp -f package/litte/commit/Leandiffconfig .config && make defconfig
-./scripts/feeds update -a && ./scripts/feeds install -a && ./scripts/feeds install -a
+git pull && ./scripts/feeds update -a
+./scripts/feeds install -a
 sed -i "s/OpenWrt /Redmi-AC2100 build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" zzz-default-settings
 sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
 #popd
