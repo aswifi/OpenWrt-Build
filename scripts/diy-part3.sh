@@ -81,7 +81,12 @@ sed -i 's/192.168.1.1/192.168.66.1/g' package/base-files/files/bin/config_genera
 # Change default shell to zsh
 #sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 
-# Mod zzz-default-settings
+# 取消bootstrap为默认主题 & Add luci-theme-edge
+sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
+git clone https://github.com/kenzok78/luci-theme-edge.git package/lean/luci-theme-edge
+rm -rf package/lean/luci-theme-argon
+
+# Mod zzz-default-settings & Modify the version number & Delete default password
 pushd package/lean/default-settings/files
 sed -i '/http/d' zzz-default-settings
 export orig_version="$(cat "zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')"
