@@ -14,8 +14,8 @@
 sed -i 's/192.168.1.1/192.168.66.1/g' package/base-files/files/bin/config_generate
 
 # Clone community packages to package/community
-mkdir package/community
-pushd package/community
+#mkdir package/community
+#pushd package/community
 
 # Add Lienol's Packages
 #git clone -b 21.02 https://github.com/Lienol/openwrt.git
@@ -25,7 +25,7 @@ pushd package/community
 #git clone https://github.com/kenzok8/openwrt-packages.git
 
 # Add Coolsnowwolf's Packages
-git clone https://github.com/coolsnowwolf/lede.git
+#git clone https://github.com/coolsnowwolf/lede.git
 
 #Add other packages
 #git clone https://github.com/garypang13/openwrt-packages.git # Add garypang13's packages
@@ -43,8 +43,8 @@ git clone https://github.com/destan19/OpenAppFilter.git # Add OpenAppFilter
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon-18.06/g' feeds/luci/collections/luci/Makefile
 
 # Mod zzz-default-settings & Modify the version number & Delete default password
-#pushd package/lean/default-settings/files
-#sed -i '/http/d' zzz-default-settings
-#export orig_version="$(cat "zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')"
-#sed -i "s/OpenWrt /Redmi-AC2100 build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" zzz-default-settings
-#sed -i "/CYXluq4wUazHjmCDBCqXF/d" zzz-default-settings
+pushd package/lean/default-settings/files
+sed -i '/http/d' zzz-default-settings
+export orig_version="$(cat "zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')"
+sed -i "s/OpenWrt /Redmi-AC2100 build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" zzz-default-settings
+sed -i "/CYXluq4wUazHjmCDBCqXF/d" zzz-default-settings
