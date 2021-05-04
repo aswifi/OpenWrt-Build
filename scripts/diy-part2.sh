@@ -13,6 +13,9 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.66.1/g' package/base-files/files/bin/config_generate
 
+# 取消bootstrap为默认主题
+sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
+
 # Clone community packages to package/community
 mkdir package/community
 pushd package/community
@@ -28,16 +31,16 @@ pushd package/community
 #popd
 
 # Add Coolsnowwolf's Packages
-git clone https://github.com/coolsnowwolf/lede.git
+#git clone https://github.com/coolsnowwolf/lede.git
 
 # Add Garypang13's Packages
 #git clone https://github.com/garypang13/openwrt-packages.git
 
-#Add other packages
-git clone https://github.com/rufengsuixing/luci-app-onliner.git # Add luci-app-onliner
-git clone https://github.com/tindy2013/openwrt-subconverter.git # Add subconverter
-git clone https://github.com/zcy85611/Openwrt-Package.git # Add luci-udptools
-git clone https://github.com/destan19/OpenAppFilter.git # Add OpenAppFilter
+# Add other packages
+#git clone https://github.com/rufengsuixing/luci-app-onliner.git # Add luci-app-onliner
+#git clone https://github.com/tindy2013/openwrt-subconverter.git # Add subconverter
+#git clone https://github.com/zcy85611/Openwrt-Package.git # Add luci-udptools
+#git clone https://github.com/destan19/OpenAppFilter.git # Add OpenAppFilter
 
 # Add luci-theme-argon
 #git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
@@ -48,8 +51,7 @@ git clone https://github.com/destan19/OpenAppFilter.git # Add OpenAppFilter
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon-18.06/g' feeds/luci/collections/luci/Makefile
 
 # Add luci-theme-edge
-git clone https://github.com/kenzok78/luci-theme-edge.git
-rm -rf ../lean/luci-theme-edge
+git clone https://github.com/kenzok78/luci-theme-edge.git package/lean/luci-theme-edge
 
 # Mod zzz-default-settings & Modify the version number & Delete default password
 #pushd package/lean/default-settings/files
@@ -60,5 +62,5 @@ rm -rf ../lean/luci-theme-edge
 #popd
 
 # Delete default password
-#sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
+sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
 #popd
