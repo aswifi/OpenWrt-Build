@@ -52,6 +52,7 @@ pushd package/community
 
 # Add luci-theme-edge
 git clone https://github.com/kenzok78/luci-theme-edge.git package/lean/luci-theme-edge
+rm -rf package/lean/luci-theme-argon
 
 # Mod zzz-default-settings & Modify the version number & Delete default password
 #pushd package/lean/default-settings/files
