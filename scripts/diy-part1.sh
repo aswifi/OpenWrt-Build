@@ -20,7 +20,6 @@ sed -i '$a src-git kenzok8 https://github.com/kenzok8/openwrt-packages' feeds.co
 #sed -i '$a src-git garypang13 https://github.com/garypang13/openwrt-packages' feeds.conf.default
 
 # Other Packages
-git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/luci-app-poweroff
 #git clone https://github.com/xiaorouji/openwrt-passwall.git package/lean/passwall
 #git clone https://github.com/kenzok8/litte.git package/lean/litte
 
