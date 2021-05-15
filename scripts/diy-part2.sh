@@ -49,6 +49,7 @@ sed -i 's/192.168.1.1/192.168.66.1/g' package/base-files/files/bin/config_genera
 
 # Add Other Packages
 git clone https://github.com/sirpdboy/NetSpeedTest.git package/lean/NetSpeedTest
+git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/luci-app-poweroff
 git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/lean/luci-app-autotimeset
 
 # 取消bootstrap为默认主题 & Add luci-theme-edge or luci-theme-rosy
