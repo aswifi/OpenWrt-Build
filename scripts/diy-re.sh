@@ -33,6 +33,7 @@ git clone https://github.com/rufengsuixing/luci-app-onliner.git # Add luci-app-o
 git clone https://github.com/tindy2013/openwrt-subconverter.git # Add subconverter
 git clone https://github.com/zcy85611/Openwrt-Package.git # Add luci-udptools
 git clone https://github.com/destan19/OpenAppFilter.git # Add OpenAppFilter
+git clone https://github.com/fszok/luci-app-advanced.git # Add Advanced-setting
 
 # Add luci-theme-argon
 #git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
