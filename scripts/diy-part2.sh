@@ -51,9 +51,10 @@ sed -i 's/192.168.1.1/192.168.66.1/g' package/base-files/files/bin/config_genera
 git clone https://github.com/sirpdboy/NetSpeedTest.git package/lean/NetSpeedTest
 git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/lean/luci-app-autotimeset
 
-# 取消bootstrap为默认主题 & Add luci-theme-edge
+# 取消bootstrap为默认主题 & Add luci-theme-edge or luci-theme-rosy
 sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
-git clone https://github.com/kenzok78/luci-theme-edge.git package/lean/luci-theme-edge
+#git clone https://github.com/kenzok78/luci-theme-edge.git package/lean/luci-theme-edge
+git clone https://github.com/rosywrt/luci-theme-rosy.git package/lean/luci-theme-rosy
 rm -rf package/lean/luci-theme-argon
 
 # Mod zzz-default-settings & Modify the version number & Delete default password
