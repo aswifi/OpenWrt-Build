@@ -57,10 +57,3 @@ git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/luci-app-
 # 取消bootstrap为默认主题
 sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 rm -rf package/luci-theme-argon
-
-# Mod zzz-default-settings & Modify the version number & Delete default password
-pushd package/lean/default-settings/files
-sed -i '/http/d' zzz-default-settings
-export orig_version="$(cat "zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')"
-sed -i "s/OpenWrt /Redmi-AC2100 build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" zzz-default-settings
-sed -i "/CYXluq4wUazHjmCDBCqXF/d" zzz-default-settings
