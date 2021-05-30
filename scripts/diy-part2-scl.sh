@@ -51,8 +51,8 @@ git clone https://github.com/CHN-beta/rkp-ipid.git package/rkp-ipid
 
 # Add Other Packages
 #git clone https://github.com/sirpdboy/NetSpeedTest.git package/lean/NetSpeedTest
-git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/luci-app-poweroff
-git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/lean/luci-app-autotimeset
+git clone https://github.com/esirplayground/luci-app-poweroff.git package/luci-app-poweroff
+git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/luci-app-autotimeset
 
 # 取消bootstrap为默认主题 & Add luci-theme-rosy
 sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
