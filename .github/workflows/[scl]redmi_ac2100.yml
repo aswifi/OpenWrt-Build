@@ -54,20 +54,20 @@ jobs:
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
         
-    - name: Clone source code
+       - name: Clone source code
       working-directory: /workdir
       run: |
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-        
+
     - name: Load custom feeds
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
         chmod +x $DIY_P1_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
-        
+
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
 
@@ -79,10 +79,10 @@ jobs:
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         cat config/app-extra-scl.config >> openwrt/.config
-        chmod +x $DIY_P2_SH
+        chmod +x $DIY_P3_SH
         cd openwrt
-        $GITHUB_WORKSPACE/$DIY_P2_SH
-        
+        $GITHUB_WORKSPACE/$DIY_P3_SH
+
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
       if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
@@ -98,51 +98,7 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-        
-    - name: Set Firewall.user
-      id: others
-      run: |
-        cd openwrt
-        cat> package/network/config/firewall/files/firewall.user <<EOF
-        iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53
-        iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-ports 53 
-        # 通过 rkp-ipid 设置 IPID
-        iptables -t mangle -N IPID_MOD
-        iptables -t mangle -A FORWARD -j IPID_MOD
-        iptables -t mangle -A OUTPUT -j IPID_MOD
-        iptables -t mangle -A IPID_MOD -d 0.0.0.0/8 -j RETURN
-        iptables -t mangle -A IPID_MOD -d 127.0.0.0/8 -j RETURN
-        #由于本校局域网是A类网，所以我将这一条注释掉了，具体要不要注释结合你所在的校园网
-        # iptables -t mangle -A IPID_MOD -d 10.0.0.0/8 -j RETURN
-        iptables -t mangle -A IPID_MOD -d 172.16.0.0/12 -j RETURN
-        iptables -t mangle -A IPID_MOD -d 192.168.0.0/16 -j RETURN
-        iptables -t mangle -A IPID_MOD -d 255.0.0.0/8 -j RETURN
-        iptables -t mangle -A IPID_MOD -j MARK --set-xmark 0x10/0x10 
-        # ua2f 改UA
-        iptables -t mangle -N ua2f
-        #由于本校局域网是A类网，所以我将这一条注释掉了，具体要不要注释结合你所在的校园网
-        # iptables -t mangle -A ua2f -d 10.0.0.0/8 -j RETURN
-        iptables -t mangle -A ua2f -d 127.0.0.0/8 -j RETURN
-        iptables -t mangle -A ua2f -d 192.168.0.0/16 -j RETURN # 不处理流向保留地址的包
-        iptables -t mangle -A ua2f -p tcp --dport 443 -j RETURN # 不处理 https
-        iptables -t mangle -A ua2f -p tcp --dport 22 -j RETURN # 不处理 SSH 
-        iptables -t mangle -A ua2f -p tcp --dport 80 -j CONNMARK --set-mark 44
-        iptables -t mangle -A ua2f -m connmark --mark 43 -j RETURN # 不处理标记为非 http 的流 (实验性)
-        iptables -t mangle -A ua2f -m set --match-set nohttp dst,dst -j RETURN
-        iptables -t mangle -A ua2f -j NFQUEUE --queue-num 10010  
-        iptables -t mangle -A FORWARD -p tcp -m conntrack --ctdir ORIGINAL -j ua2f
-        iptables -t mangle -A FORWARD -p tcp -m conntrack --ctdir REPLY  
-        # 防时钟偏移检测
-        iptables -t nat -N ntp_force_local
-        iptables -t nat -I PREROUTING -p udp --dport 123 -j ntp_force_local
-        iptables -t nat -A ntp_force_local -d 0.0.0.0/8 -j RETURN
-        iptables -t nat -A ntp_force_local -d 127.0.0.0/8 -j RETURN
-        iptables -t nat -A ntp_force_local -d 192.168.0.0/16 -j RETURN
-        iptables -t nat -A ntp_force_local -s 192.168.0.0/16 -j DNAT --to-destination 192.168.1.1 
-        # 通过 iptables 修改 TTL 值
-        iptables -t mangle -A POSTROUTING -j TTL --ttl-set 64
-        EOF
-        
+
     - name: Compile the firmware
       id: compile
       run: |
@@ -153,7 +109,7 @@ jobs:
         grep '^CONFIG_TARGET.*DEVICE.*=y' .config | sed -r 's/.*DEVICE_(.*)=y/\1/' > DEVICE_NAME
         [ -s DEVICE_NAME ] && echo "DEVICE_NAME=_$(cat DEVICE_NAME)" >> $GITHUB_ENV
         echo "FILE_DATE=_$(date +"%Y%m%d%H%M")" >> $GITHUB_ENV
-        
+
     - name: Check space usage
       if: (!cancelled())
       run: df -hT
@@ -173,7 +129,7 @@ jobs:
         rm -rf packages
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "::set-output name=status::success"
-        
+
     - name: Upload firmware directory
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
@@ -189,7 +145,7 @@ jobs:
         ./transfer cow --block 2621440 -s -p 64 --no-progress ${FIRMWARE} 2>&1 | tee cowtransfer.log
         echo "::warning file=cowtransfer.com::$(cat cowtransfer.log | grep https)"
         echo "::set-output name=url::$(cat cowtransfer.log | grep https | cut -f3 -d" ")"
-        
+
     - name: Upload firmware to WeTransfer
       id: wetransfer
       if: steps.organize.outputs.status == 'success' && env.UPLOAD_WETRANSFER == 'true' && !cancelled()
@@ -198,7 +154,7 @@ jobs:
         ./transfer wet -s -p 16 --no-progress ${FIRMWARE} 2>&1 | tee wetransfer.log
         echo "::warning file=wetransfer.com::$(cat wetransfer.log | grep https)"
         echo "::set-output name=url::$(cat wetransfer.log | grep https | cut -f3 -d" ")"
-        
+
     - name: Generate release tag
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
@@ -208,21 +164,21 @@ jobs:
         [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
         [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
         echo "::set-output name=status::success"
-        
+
     - name: Upload firmware to release
       uses: softprops/action-gh-release@v1
       if: steps.tag.outputs.status == 'success' && !cancelled()
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
       with:
-        tag_name: test-${{ steps.tag.outputs.release_tag }}
+        tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
 
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
       with:
-        retain_days: 1
+        retain_days: 14
         keep_minimum_runs: 3
 
     - name: Remove old Releases
@@ -232,4 +188,4 @@ jobs:
         keep_latest: 3
         delete_tags: true
       env:
-        GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
+        REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
