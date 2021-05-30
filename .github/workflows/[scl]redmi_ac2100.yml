@@ -98,7 +98,7 @@ jobs:
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
         
-    - name: Set user firewall
+    - name: Set firewall.user
       id: others
       run: |
         cd openwrt
