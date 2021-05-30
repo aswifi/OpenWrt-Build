@@ -50,7 +50,7 @@ git clone https://github.com/CHN-beta/rkp-ipid package/rkp-ipid
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon-18.06/g' feeds/luci/collections/luci/Makefile
 
 # Add Other Packages
-git clone https://github.com/sirpdboy/NetSpeedTest.git package/lean/NetSpeedTest
+#git clone https://github.com/sirpdboy/NetSpeedTest.git package/lean/NetSpeedTest
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/luci-app-poweroff
 git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/lean/luci-app-autotimeset
 
