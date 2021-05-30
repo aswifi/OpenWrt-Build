@@ -18,6 +18,7 @@ sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 #sed -i '$a src-git small8 https://github.com/kenzok8/small-package' feeds.conf.default
 sed -i '$a src-git kenzok8 https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 #sed -i '$a src-git garypang13 https://github.com/garypang13/openwrt-packages' feeds.conf.default
+sed -i '$a src-git jeii https://github.com/kenzok78/jeii' feeds.conf.default
 
 # Other Packages
 #git clone https://github.com/xiaorouji/openwrt-passwall.git package/lean/passwall
