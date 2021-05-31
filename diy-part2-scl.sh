@@ -53,7 +53,7 @@ git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/lean/luci
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon-18.06/g' feeds/luci/collections/luci/Makefile
 
 # 取消bootstrap为默认主题
-sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
+#sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 #rm -rf package/lean/luci-theme-argon
 
 # Mod zzz-default-settings & Modify the version number & Delete default password
