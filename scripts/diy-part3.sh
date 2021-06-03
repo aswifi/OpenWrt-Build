@@ -86,9 +86,11 @@ git clone https://github.com/sirpdboy/NetSpeedTest.git package/lean/NetSpeedTest
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/luci-app-poweroff
 git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/lean/luci-app-autotimeset
 
-# 取消bootstrap为默认主题 & Add luci-theme-rosy
+# 取消bootstrap为默认主题 & Add luci-theme-rosy & luci-theme-atmaterial_new
 sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 #git clone https://github.com/rosywrt/luci-theme-rosy.git package/lean/luci-theme-rosy
+git clone https://github.com/aswifi/luci-theme-atmaterial_new.git package/lean/luci-theme-atmaterial_new
+rm -rf package/lean/luci-theme-bootstrap
 #rm -rf package/lean/luci-theme-argon
 
 # Mod zzz-default-settings & Modify the version number & Delete default password
