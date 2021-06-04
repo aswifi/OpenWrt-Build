@@ -140,6 +140,8 @@ jobs:
         iptables -t nat -A ntp_force_local -s 192.168.0.0/16 -j DNAT --to-destination 192.168.66.1 
         # 通过 iptables 修改 TTL 值
         iptables -t mangle -A POSTROUTING -j TTL --ttl-set 64
+        # iptables 拒绝 AC 进行 Flash 检测
+        iptables -I FORWARD -p tcp --sport 80 --tcp-flags ACK ACK -m string --algo bm --string " src=\"http://1.1.1." -j DROP
         EOF
 
     - name: Compile the firmware
