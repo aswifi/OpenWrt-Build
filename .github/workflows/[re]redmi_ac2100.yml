@@ -32,6 +32,11 @@ env:
   UPLOAD_WETRANSFER: true
   UPLOAD_RELEASE: false
   TZ: Asia/Shanghai
+  
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: 0 0 ? * FRI  
 
 jobs:
   build:
