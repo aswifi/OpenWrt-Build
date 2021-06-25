@@ -13,6 +13,8 @@ name: Build Redmi AC2100 OpenWrt User
 on:
   repository_dispatch:
   workflow_dispatch:
+  schedule:
+    - cron: 0 0 ? * FRI 
     inputs:
       ssh:
         description: 'SSH connection to Actions'
@@ -32,11 +34,6 @@ env:
   UPLOAD_WETRANSFER: true
   UPLOAD_RELEASE: false
   TZ: Asia/Shanghai
-  
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: 0 0 ? * FRI  
 
 jobs:
   build:
