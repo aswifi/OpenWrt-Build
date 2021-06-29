@@ -38,7 +38,8 @@ sed -i 's/192.168.1.1/192.168.66.1/g' package/base-files/files/bin/config_genera
 #git clone https://github.com/tindy2013/openwrt-subconverter.git # Add subconverter
 #git clone https://github.com/zcy85611/Openwrt-Package.git # Add luci-udptools
 #git clone https://github.com/destan19/OpenAppFilter.git # Add OpenAppFilter
-git clone https://github.com/Zxilly/UA2F.git package/lean/UA2F
+#git clone https://github.com/Zxilly/UA2F.git package/lean/UA2F
+git clone https://github.com/aswifi/UA2F.git package/lean/UA2F
 git clone https://github.com/CHN-beta/rkp-ipid.git package/lean/rkp-ipid
 git clone https://github.com/sirpdboy/NetSpeedTest.git package/lean/NetSpeedTest
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/luci-app-poweroff
