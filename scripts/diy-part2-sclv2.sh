@@ -57,7 +57,7 @@ git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/lean/luci
 # 取消bootstrap为默认主题 & Add luci-theme-atmaterial_new
 sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 git clone https://github.com/aswifi/luci-theme-atmaterial_new.git package/lean/luci-theme-atmaterial_new
-rm -rf package/lean/luci-theme-bootstrap
+#rm -rf package/lean/luci-theme-bootstrap
 
 # Mod zzz-default-settings & Modify the version number & Delete default password
 pushd package/lean/default-settings/files
