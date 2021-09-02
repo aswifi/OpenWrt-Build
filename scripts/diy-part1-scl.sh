@@ -14,8 +14,8 @@
 sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add feed sources
-sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
-sed -i '$a src-git kenzok8 https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+#sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
+#sed -i '$a src-git kenzok8 https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 #sed -i '$a src-git jeii https://github.com/kenzok78/jeii' feeds.conf.default
 
 # 更新queue
