@@ -26,7 +26,7 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: config/app-extra-sclv2.config
-  DIY_P1_SH: scripts/diy-part1-scl.sh
+  DIY_P1_SH: scripts/diy-part1-sclv2.sh
   DIY_P2_SH: scripts/diy-part2-sclv2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
