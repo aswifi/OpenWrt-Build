@@ -58,9 +58,9 @@ git clone https://github.com/openwrt/packages.git package
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon-18.06/g' feeds/luci/collections/luci/Makefile
 
 # 取消bootstrap为默认主题 & Add luci-theme-atmaterial_new
-sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
+#sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 #git clone https://github.com/aswifi/luci-theme-atmaterial_new.git package/lean/luci-theme-atmaterial_new
-git clone https://github.com/sirpdboy/luci-theme-opentopd.git package/lean/luci-theme-opentopd
+#git clone https://github.com/sirpdboy/luci-theme-opentopd.git package/lean/luci-theme-opentopd
 #rm -rf package/lean/luci-theme-bootstrap
 
 # Mod zzz-default-settings & Modify the version number & Delete default password
