@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build Redmi AC2100 OpenWrt SCLV2 IPV4ONLY TEST
+name: Build Redmi AC2100 OpenWrt SCLV2 HC
 
 on:
   repository_dispatch:
