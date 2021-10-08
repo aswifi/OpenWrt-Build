@@ -46,6 +46,9 @@ git clone https://github.com/sirpdboy/NetSpeedTest.git package/lean/NetSpeedTest
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/luci-app-poweroff
 git clone https://github.com/aswifi/luci-app-autotimeset.git package/lean/luci-app-autotimeset
 
+# Update libs
+git clone https://github.com/openwrt/packages.git package
+
 # Add luci-theme-argon
 #git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
 #git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
