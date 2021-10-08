@@ -1,1 +1,1 @@
-# OpenWrt for Xiaomi/Redmi-AC2100/ETC
+# OpenWrt for Xiaomi/Redmi-AC2100/ETC.
