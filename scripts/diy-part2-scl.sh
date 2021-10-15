@@ -44,6 +44,7 @@ git clone https://github.com/CHN-beta/rkp-ipid.git package/lean/rkp-ipid
 git clone https://github.com/sirpdboy/NetSpeedTest.git package/lean/NetSpeedTest
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/luci-app-poweroff
 git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/lean/luci-app-autotimeset
+git clone https://github.com/sirpdboy/luci-theme-opentopd.git package/lean/luci-theme-opentopd
 
 # Add luci-theme-argon
 #git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
