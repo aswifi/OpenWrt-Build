@@ -105,8 +105,12 @@ jobs:
         iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53
         iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-ports 53
         iptables -t mangle -N ua2f
+        iptables -t mangle -A ua2f -d 0.0.0.0/8 -j RETURN
         iptables -t mangle -A ua2f -d 127.0.0.0/8 -j RETURN
         iptables -t mangle -A ua2f -d 192.168.0.0/16 -j RETURN
+		    iptables -t mangle -A ua2f -d 169.254.0.0/16 -j RETURN
+        iptables -t mangle -A ua2f -d 224.0.0.0/4 -j RETURN
+        iptables -t mangle -A ua2f -d 240.0.0.0/4 -j RETURN
         iptables -t mangle -A ua2f -p tcp --dport 443 -j RETURN
         iptables -t mangle -A ua2f -p tcp --dport 22 -j RETURN
         iptables -t mangle -A ua2f -p tcp --dport 80 -j CONNMARK --set-mark 44
