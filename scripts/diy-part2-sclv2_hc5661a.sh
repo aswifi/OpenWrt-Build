@@ -13,6 +13,9 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.33.1/g' package/base-files/files/bin/config_generate
 
+# 修改内核设置
+sed -i 's/KERNEL_PATCHVER:=5.4/KERNEL_PATCHVER:=5.10/g' ./target/linux/ramips/Makefile
+
 # Clone community packages to package/community
 #mkdir package/community
 #pushd package/community
