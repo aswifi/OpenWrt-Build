@@ -22,4 +22,4 @@ sed -i '$a src-git NueXini_Packages https://github.com/NueXini/NueXini_Packages'
 
 # 修改内核设置
 #sed -i 's/KERNEL_PATCHVER:=5.4/KERNEL_PATCHVER:=5.10/g' ./target/linux/ramips/Makefile
-#sed -i 's/KERNEL_TESTING_PATCHVER:=5.10/KERNEL_TESTING_PATCHVER:=5.4/g' ./target/linux/ramips/Makefile
+sed -i 's/KERNEL_TESTING_PATCHVER:=5.10/KERNEL_TESTING_PATCHVER:=5.4/g' ./target/linux/ramips/Makefile
