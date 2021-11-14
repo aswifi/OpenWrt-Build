@@ -14,7 +14,7 @@
 sed -i 's/192.168.1.1/192.168.33.1/g' package/base-files/files/bin/config_generate
 
 # 修改内核设置
-sed -i 's/KERNEL_PATCHVER:=5.4/KERNEL_PATCHVER:=5.10/g' ./target/linux/ramips/Makefile
+#sed -i 's/KERNEL_PATCHVER:=5.4/KERNEL_PATCHVER:=5.10/g' ./target/linux/ramips/Makefile
 
 # Clone community packages to package/community
 #mkdir package/community
@@ -43,14 +43,15 @@ sed -i 's/KERNEL_PATCHVER:=5.4/KERNEL_PATCHVER:=5.10/g' ./target/linux/ramips/Ma
 #git clone https://github.com/destan19/OpenAppFilter.git # Add OpenAppFilter
 #git clone https://github.com/Zxilly/UA2F.git package/lean/UA2F
 #git clone https://github.com/aswifi/UA2F.git package/lean/UA2F
-git clone https://github.com/AmbiteamProject/UA2F.git package/lean/UA2F
-git clone https://github.com/CHN-beta/rkp-ipid.git package/lean/rkp-ipid
+#git clone https://github.com/AmbiteamProject/UA2F.git package/lean/UA2F
+#git clone https://github.com/CHN-beta/rkp-ipid.git package/lean/rkp-ipid
 git clone https://github.com/sirpdboy/NetSpeedTest.git package/lean/NetSpeedTest
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/luci-app-poweroff
 git clone https://github.com/aswifi/luci-app-autotimeset.git package/lean/luci-app-autotimeset
+git clone https://github.com/aswifi/xmurp-ua.git package/lean/xmurp-ua
 
 # Update libs
-git clone https://github.com/openwrt/packages.git package
+#git clone https://github.com/openwrt/packages.git package
 
 # Add luci-theme-argon
 #git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
