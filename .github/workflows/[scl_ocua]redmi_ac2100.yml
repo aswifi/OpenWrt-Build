@@ -28,11 +28,11 @@ env:
   CONFIG_FILE: config/app-extra-sclv2_ipv4only_testocua.config
   DIY_P1_SH: scripts/diy-part1-scl.sh
   DIY_P2_SH: scripts/diy-part2-scl.sh
-  UPLOAD_BIN_DIR: false
+  UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
-  UPLOAD_RELEASE: false
+  UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
 
 jobs:
