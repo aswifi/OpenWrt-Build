@@ -22,7 +22,7 @@ on:
     - cron: 0 0 ? * FRI
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_URL: https://github.com/destan19/openfros
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: config/app-extra-sclv2_ipv4only.config
