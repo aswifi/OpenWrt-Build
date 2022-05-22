@@ -19,11 +19,11 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 #sed -i '$a src-git jeii https://github.com/kenzok78/jeii' feeds.conf.default
 
 # 更新queue
-git clone https://github.com/openwrt/packages
-rm -rf package/libs/libnetfilter-queue
+#git clone https://github.com/openwrt/packages
+#rm -rf package/libs/libnetfilter-queue
 
 # cp命令方便本地使用
-cp -rf packages/libs/libnetfilter-queue package/libs/
+#cp -rf packages/libs/libnetfilter-queue package/libs/
 
 # 修改内核设置
 echo "CONFIG_IP_SET=y" >> target/linux/ramips/mt7621/config-5.4
