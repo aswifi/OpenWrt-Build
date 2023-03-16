@@ -42,7 +42,7 @@ git clone https://github.com/kenzok8/openwrt-packages.git package/kenzok8
 #git clone https://github.com/zcy85611/Openwrt-Package.git # Add luci-udptools
 #git clone https://github.com/destan19/OpenAppFilter.git # Add OpenAppFilter
 #git clone https://github.com/Zxilly/UA2F.git package/lean/UA2F
-git clone https://github.com/aswifi/UA2F.git package/lean/UA2F
+git clone https://github.com/aswifi/UAWizard.git package/lean/UAWizard
 git clone https://github.com/CHN-beta/rkp-ipid.git package/lean/rkp-ipid
 git clone https://github.com/sirpdboy/NetSpeedTest.git package/lean/NetSpeedTest
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/luci-app-poweroff
