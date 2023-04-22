@@ -63,7 +63,7 @@ jobs:
         CONFIG_FILE: 'config/app-extra-sclv2_ipv4only_testocua.config'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-        chmod +x ./scripts/diy-part1-scl.sh && ./scripts/diy-part1-scl.sh
+        chmod +x ./scripts/diy-all-scl.sh && ./scripts/diy-all-scl.sh
         cd openwrt && make defconfig
 
     - name: Download package
