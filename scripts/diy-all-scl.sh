@@ -27,7 +27,8 @@ echo "CONFIG_NF_TABLES=y" >> target/linux/ramips/mt7621/config-5.4
 sed -i 's/192.168.1.1/192.168.66.1/g' package/base-files/files/bin/config_generate
 
 # Add other packages
-git clone https://github.com/aswifi/UAWizard.git package/lean/UAWizard
+git clone https://github.com/Zxilly/UA2F.git package/lean/UA2F
+# git clone https://github.com/aswifi/UAWizard.git package/lean/UAWizard
 git clone https://github.com/CHN-beta/rkp-ipid.git package/lean/rkp-ipid
 git clone https://github.com/sirpdboy/NetSpeedTest.git package/lean/NetSpeedTest
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/luci-app-poweroff
